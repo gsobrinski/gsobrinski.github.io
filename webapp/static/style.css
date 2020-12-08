@@ -253,9 +253,34 @@ body {
     }
 }
 
-@media only screen and (max-width: 1200px) { 
+@media only screen and (max-width: 1400px) { 
+
+    .profile {
+        padding: .2rem; 
+        margin-top: 0px;
+    }
+
+    .topNav {
+        margin-bottom: 0px;
+    }
+
     .profile img {
         width: 150px;
         height: auto;
     }
+
+    .profile h2 {
+        font-size: 14px;
+        padding: .2rem;
+    }
+    
+    .profile p {
+        font-size: 12px;
+        padding: .2rem;
+    }
+    
+    .links-container a {
+        font-size: 12px;
+    }
+
 }
