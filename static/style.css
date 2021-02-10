@@ -227,6 +227,12 @@ body {
     text-decoration: none;
 }
 
+/* carousel arrows */
+.carousel-control-next,
+.carousel-control-prev  {
+    filter: invert(100%);
+}
+
 /* mobile only */
 @media only screen and (max-width: 800px) { 
     .topNav {
