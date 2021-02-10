@@ -1,0 +1,286 @@
+/* 
+body:
+font-family: 'Nunito', sans-serif;
+header:
+font-family: 'Yeseva One', cursive;
+*/
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: rgb(238, 238, 238);
+}
+
+.topNav {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    margin-bottom: 2rem;
+    white-space: nowrap;
+    background-color: white;
+    border-bottom: 1px solid lightgray;
+    /* make topnav sticky */
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.topNav h2 {
+    font-family: 'Yeseva One', cursive;
+    letter-spacing: .15rem;
+    font-size: 2.5rem;
+    padding: .7rem 2rem;
+
+    display: inline-block;
+}
+
+.topNav .links-container {
+    display: inline-block;
+}
+
+.col-md-3 {
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+}
+
+.bio-container {
+    background-color: white;
+    margin: 1rem;
+    padding: .5rem;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+}
+
+.profile {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 110px;
+}
+
+.resume a {
+    text-decoration: none;
+    letter-spacing: .09rem;
+    font-size: 1rem;
+    padding: .3rem .6rem;
+    border: 1px solid lightgray;
+    background-color: rgba(120, 201, 161, 0.3);
+    border-radius: 5px;
+    color: black;
+}
+
+.bio-container a:hover {
+    color: white;
+}
+
+.col-md-3 h2, .col-md-9 h2, .col-md-4 h2, h3 {
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.1rem;
+    letter-spacing: .1rem;
+    padding: .5rem;
+    margin: .5rem;
+    border: 1px solid rgba(120, 201, 161, 0.3);
+    border-radius: 5px;
+}
+
+.col-md-9 h2 {
+    font-size: 1.5rem;
+}
+.col-md-4 h2 {
+    font-size: 1.1rem;
+}
+
+.col-md-3 p, .col-md-9 p, .col-md-4 ul {
+    font-size: .85rem;
+    line-height: 1.5rem;
+    letter-spacing: .08rem;
+    padding: .5rem;
+    margin: .5rem;
+    border: 1px solid rgba(120, 201, 161, 0.3);
+    border-radius: 5px;
+}
+
+.col-md-4 ul {
+    list-style: none;
+}
+
+.about {
+    font-size: .95rem !important
+}
+
+.col-md-9 p {
+    font-size: 1rem;
+}
+
+.col-md-3 img {
+    padding: .5rem;
+    margin: .5rem;
+    border: 1px solid rgba(120, 201, 161, 0.3);
+    width: 90%;
+    border-radius: 5px;
+}
+
+.col-md-9 {
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+}
+
+.col-md-9 p {
+    padding: 2rem;
+}
+
+.links-container a {
+    color: black;
+    padding: .5rem;
+    font-size: .8rem;
+    font-family: 'Yeseva One', cursive;
+}
+
+.links-container a:hover {
+    color: #125362;
+    text-decoration: none;
+}
+
+/* flipcard styling */
+
+.card-flip, .card-container {
+    transform-style: preserve-3d;
+    transition: all 0.7s ease;
+}
+
+.card-flip div {
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+.back {
+    transform: rotateY(-180deg);
+}
+
+.card-container:hover .card-flip {
+    transform: rotateY(180deg);
+}
+
+.card-flip {
+    display: grid; grid-template: 1fr / 1fr;
+    grid-template-areas: "frontAndBack";
+    transform-style: preserve-3d;
+    transition: all 0.7s ease;
+}
+
+.front {
+    grid-area: frontAndBack;
+}
+
+.front img, .carousel img, .alternatepic {
+    max-width: 100%; 
+    /* display: block;  */
+    height: auto;
+}
+
+
+.alternatepic {
+    max-width: 100%; 
+    
+}
+
+
+.mobileimage {
+    display: none;
+}
+
+.back {
+    grid-area: frontAndBack;
+    transform: rotateY(-180deg);
+}
+
+.card-container {
+    display: grid;
+    perspective: 1000px;
+    padding: 1rem;
+    margin: 4rem 0rem;
+    border: 1px solid rgba(120, 201, 161, 0.3);
+    border-radius: 10px;
+}
+
+.pfp {
+    margin: 0rem;
+}
+
+.pfp img {
+    border: none;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.carousel-div p {
+    text-align: left;
+}
+
+.project-desc a:hover {
+    color: darkblue;
+    text-decoration: none;
+}
+
+/* mobile only */
+@media only screen and (max-width: 800px) { 
+    .topNav {
+        white-space: normal;
+    }
+
+    .topNav h2 {
+        display: block;
+        font-size: 2rem;
+    }
+    
+    .topNav .links-container {
+        display: block;
+        padding-left: 2rem;
+        padding-bottom: 1rem;
+    }
+
+    .desktopimage {
+        display: none !important
+    }
+
+    .mobileimage {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 1400px) { 
+
+    .profile {
+        padding: .2rem; 
+        margin-top: 0px;
+    }
+
+    .topNav {
+        margin-bottom: 0px;
+    }
+
+    .profile img {
+        width: 150px;
+        height: auto;
+    }
+
+    .profile h2 {
+        font-size: 14px;
+        padding: .2rem;
+    }
+    
+    .profile p {
+        font-size: 12px;
+        padding: .2rem;
+    }
+    
+    .links-container a {
+        font-size: 12px;
+    }
+
+}
